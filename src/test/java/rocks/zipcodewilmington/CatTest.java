@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Cat;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -18,6 +19,61 @@ public class CatTest {
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
 
+
+    @Test
+    public void testSetName() {
+        String givenName = "Chet";
+
+        Cat cat = new Cat(givenName, null, null);
+
+        String retrievedName = cat.getName();
+
+        Assert.assertEquals(givenName, retrievedName);
+    }
+
+    @Test
+    public void testSpeak() {
+        String givenSpeak = "meow!";
+
+        Cat cat = new Cat(null,null,null);
+
+        String retrievedSpeak = cat.speak();
+
+        Assert.assertEquals(givenSpeak, retrievedSpeak);
+    }
+
+    @Test
+    public void testBirthDate() {
+        Date givenBirthDate = new Date();
+
+        Cat cat = new Cat(null,givenBirthDate,null);
+
+        Date retrievedBirthDate = cat.getBirthDate();
+
+        Assert.assertEquals(givenBirthDate, retrievedBirthDate);
+    }
+
+    @Test
+    public void testEat() {
+        Integer givenNumberOfMealsEaten = 0;
+
+        Cat cat = new Cat(null,null,null);
+
+        Integer retrievedFood = cat.getNumberOfMealsEaten();
+
+        Assert.assertEquals(givenNumberOfMealsEaten, retrievedFood);
+    }
+
+    @Test
+    public void testId() {
+        Integer givenId = 0;
+
+        Cat cat = new Cat(null,null,givenId);
+
+        Integer retrievedId = cat.getId();
+
+        Assert.assertEquals(givenId, retrievedId);
+    }
 
     @Test
     public void constructorTest() {
