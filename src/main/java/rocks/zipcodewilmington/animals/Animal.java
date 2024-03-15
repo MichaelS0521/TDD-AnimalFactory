@@ -7,6 +7,7 @@ import rocks.zipcodewilmington.Food;
  */
 public interface Animal {
     String speak();
+    String getName();
     Integer getNumberOfMealsEaten();
     Integer getId();
     void eat(Food food);
